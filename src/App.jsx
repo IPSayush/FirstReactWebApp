@@ -9,10 +9,7 @@ import Contact from './components/Contact.jsx'
 const App = () => {
   return (
     <>
-    <div className="pt-20">
-      <Navbar />
-    </div>
-    
+    <Navbar/>
     <Routes>
       <Route path='/' element={<Home />}/>
       <Route path='/about' element={<About />}/>
