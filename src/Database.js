@@ -1,3 +1,4 @@
+export let CompanyTitle= "Etech.";
 export let HeroContaint = {
   Heading: "Knausgaard typewriter readymade marfa",
   Description: "Chillwave portland ugh, knausgaard fam polaroid iPhone. Man braid swag typewriter affogato, hella selvage wolf narwhal dreamcatcher.",
@@ -153,23 +154,81 @@ export let ProductsContaint = {
 export let FooterContaint = {
   Cards: {
     Card1: {
-      Title: "Shooting Stars",
-      Description: "Blue bottle crucifix vinyl post-ironic four dollar toast vegan taxidermy. Gastropub indxgo juice poutine, ramps microdosing banh mi pug VHS try-hard.",
-      Button: "Learn More"
+      Title: "Shooting Stars1",
+      Description: "Blue bottle crucifix vinyl post-ironic four dollar toast vegan taxidermy. Gastropub indxgo juice poutine, ramps microdosing banh mi pug VHS try-hard.1",
+      Button: "Learn More1"
     },
     Card2: {
-      Title: "The Catalyzer",
-      Description: "Blue bottle crucifix vinyl post-ironic four dollar toast vegan taxidermy. Gastropub indxgo juice poutine, ramps microdosing banh mi pug VHS try-hard.",
-      Button: "Learn More"
+      Title: "The Catalyzer2",
+      Description: "Blue bottle crucifix vinyl post-ironic four dollar toast vegan taxidermy. Gastropub indxgo juice poutine, ramps microdosing banh mi pug VHS try-hard.2",
+      Button: "Learn More2"
     },
     Card3: {
-      Title: "Neptune",
-      Description: "Blue bottle crucifix vinyl post-ironic four dollar toast vegan taxidermy. Gastropub indxgo juice poutine, ramps microdosing banh mi pug VHS try-hard.",
-      Button: "Learn More"
+      Title: "Neptune3",
+      Description: "Blue bottle crucifix vinyl post-ironic four dollar toast vegan taxidermy. Gastropub indxgo juice poutine, ramps microdosing banh mi pug VHS try-hard.3",
+      Button: "Learn More3"
     }
   },
   Button: "Button",
   Description: "Edison bulb retro cloud bread echo park, helvetica stumptown taiyaki taxidermy 90's cronut +1 kinfolk. Single-origin coffee ennui shaman taiyaki vape DIY tote bag drinking vinegar cronut adaptogen squid fanny pack vaporware. Man bun next level coloring book skateboard four loko knausgaard. Kitsch keffiyeh master cleanse direct trade indigo juice before they sold out gentrify plaid gastropub normcore XOXO 90's pickled cindigo jean shorts. Slow-carb next level shoindigoitch ethical authentic, yr scenester sriracha forage franzen organic drinking vinegar.",
   SubHeading:"HOLDEN CAULFIELD",
   SubDescription: "Senior Product Designer"
+}
+export let ContactContaint ={
+  MapLink: 'https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d28483.207607409666!2d75.78131744119368!3d26.827196770397126!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2s!5e0!3m2!1sen!2sin!4v1764008424544!5m2!1sen!2sin',
+  Heading: 'Contact',
+  Description:'Post-ironic portland shabby chic echo park, banjo fashion axe',
+  ContactType: 'Email',
+  Massage:'Massage',
+  Button:'Send',
+  SubDescription:'Hy this is ayush and i want to slepp'
+}
+export let AboutContaint = {
+  Heading:'Our Team',
+  Description:'Just like HTML DOM events, React can perform actions based on user events.React has the same events as HTML: click, change, mouseover etc.',
+  Card1:{
+    Image: 'https://dummyimage.com/108x98',
+    Name: 'Nitin Soni',
+    Position: 'UI Designer'
+  },
+  Card2:{
+    Image: 'https://dummyimage.com/108x98',
+    Name: 'Satya',
+    Position: 'CTO'
+  },
+  Card3:{
+    Image: 'https://dummyimage.com/108x98',
+    Name: 'Ayush',
+    Position: 'Founder'
+  },
+  Card4:{
+    Image: 'https://dummyimage.com/108x98',
+    Name: 'Manish',
+    Position: 'DevOps'
+  },
+  Card5:{
+    Image: 'https://dummyimage.com/108x98',
+    Name: 'Sahil',
+    Position: 'Software Engineer'
+  },
+  Card6:{
+    Image: 'https://dummyimage.com/108x98',
+    Name: 'Hanish',
+    Position: 'UX Researcher'
+  },
+  Card7:{
+    Image: 'https://dummyimage.com/108x98',
+    Name: 'Manjot',
+    Position: 'QA Engineer'
+  },
+  Card8:{
+    Image: 'https://dummyimage.com/108x98',
+    Name: 'Vaishnavi',
+    Position: 'System'
+  },
+  Card9:{
+    Image: 'https://dummyimage.com/108x98',
+    Name: 'Vishnu',
+    Position: 'Product Manager'
+  }
 }

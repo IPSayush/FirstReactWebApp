@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
+import { CompanyTitle } from '../Database.js';
 
 /*
   Reference image (design) available at:
@@ -37,9 +38,8 @@ export default function Navbar() {
   return (
     // Fixed header so it stays on scroll. z-50 ensures on top of other content.
     <header
-      className={`fixed top-0 left-0 w-full z-50 transition-colors duration-200 ${
-        scrolled ? 'backdrop-blur-sm bg-bone/90 shadow-md' : 'bg-bone/95'
-      }`}
+      className={`fixed top-0 left-0 w-full z-50 transition-colors duration-200 ${scrolled ? 'backdrop-blur-sm bg-bone/90 shadow-md' : 'bg-bone/95'
+        }`}
     >
       <div className="container mx-auto flex items-center justify-between px-4 md:px-6 py-3 md:py-4">
         {/* Brand / logo */}
@@ -54,14 +54,14 @@ export default function Navbar() {
             stroke="currentColor"
             strokeLinecap="round"
             strokeLinejoin="round"
-            strokeWidth="1.8"
+            strokeWidth={1.8}
             viewBox="0 0 24 24"
             className="w-10 h-10 text-white p-2 bg-primary rounded-full"
           >
             <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" />
           </svg>
 
-          <span className="text-title font-semibold text-lg md:text-xl">Etech.</span>
+          <span className="text-title font-semibold text-lg md:text-xl">{CompanyTitle}</span>
         </Link>
 
         {/* Desktop nav */}
@@ -72,9 +72,8 @@ export default function Navbar() {
               <Link
                 key={link.to}
                 to={link.to}
-                className={`relative py-1 px-1 text-sm font-medium transition-colors ${
-                  active ? 'text-primary' : 'text-muted hover:text-primary'
-                }`}
+                className={`relative py-1 px-1 text-sm font-medium transition-colors ${active ? 'text-primary' : 'text-muted hover:text-primary'
+                  }`}
               >
                 {link.label}
                 {active && (
@@ -115,7 +114,7 @@ export default function Navbar() {
               stroke="currentColor"
               strokeLinecap="round"
               strokeLinejoin="round"
-              strokeWidth="2"
+              strokeWidth={2}
               viewBox="0 0 24 24"
             >
               {open ? (
@@ -130,9 +129,8 @@ export default function Navbar() {
 
       {/* Mobile menu panel */}
       <div
-        className={`md:hidden transition-max-height duration-300 overflow-hidden ${
-          open ? 'max-h-[400px]' : 'max-h-0'
-        }`}
+        className={`md:hidden transition-max-height duration-300 overflow-hidden ${open ? 'max-h-[400px]' : 'max-h-0'
+          }`}
       >
         <div className="px-4 pb-4 pt-2 border-t border-gray-200/60">
           <nav className="flex flex-col gap-2">
@@ -142,9 +140,8 @@ export default function Navbar() {
                 <Link
                   key={link.to}
                   to={link.to}
-                  className={`block rounded-md px-3 py-2 text-sm font-medium transition-colors ${
-                    active ? 'bg-primary/5 text-primary' : 'text-title hover:text-primary'
-                  }`}
+                  className={`block rounded-md px-3 py-2 text-sm font-medium transition-colors ${active ? 'bg-primary/5 text-primary' : 'text-title hover:text-primary'
+                    }`}
                 >
                   {link.label}
                 </Link>
