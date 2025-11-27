@@ -1,10 +1,9 @@
 import React from 'react'
-import Hero from './Home/Hero.jsx';
-import Layout from './Home/Layout.jsx';
-import Cards from './Home/Cards.jsx';
-import Products from './Home/Products.jsx';
-import Headings from './Home/Headings.jsx';
-import Footer from './Home/Footer.jsx';
+import Hero from '../Component/Hero.jsx';
+import Layout from '../Component/Layout.jsx';
+import Cards from '../Component/Cards.jsx';
+import Products from '../Component/Products.jsx';
+import Headings from '../Component/Headings.jsx';
 import {HeroContaint,LayoutContaint,HeadingsContaint,CardsContaint,ProductsContaint,FooterContaint} from '../Database.js'
 
 const Home = () => {
@@ -30,9 +29,6 @@ const Home = () => {
       </div>
       <div className='bg-[#394024]'>
         <Headings HeadingsContaint={HeadingsContaint.Heading3}/>
-      </div>
-      <div className='bg-[#B9BC97]'>
-        <Footer footerContaint={FooterContaint} />
       </div>
     </>
   )

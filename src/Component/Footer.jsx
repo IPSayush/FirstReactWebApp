@@ -4,18 +4,19 @@ import React from 'react';
  * Safe Footer: uses optional chaining and defaults so it won't crash
  * if footerContaint is undefined or missing fields.
  */
-export default function Footer({ footerContaint = {} }) {
+export default function Footer({FooterContaint }) {
+  
   // Provide safe defaults
   // i was pass props nornamly but is was throwing error while clicking on navlink so i use Defauld Objects code is copied from chatgpt 
-  const cards = footerContaint?.Cards ?? {};
-  const card1 = cards?.Card1 ?? { Title: '', Description: '', Button: '' };
-  const card2 = cards?.Card2 ?? { Title: '', Description: '', Button: '' };
-  const card3 = cards?.Card3 ?? { Title: '', Description: '', Button: '' };
+  // const cards = footerContaint?.Cards ?? {};
+  // const card1 = cards?.Card1 ?? { Title: '', Description: '', Button: '' };
+  // const card2 = cards?.Card2 ?? { Title: '', Description: '', Button: '' };
+  // const card3 = cards?.Card3 ?? { Title: '', Description: '', Button: '' };
 
-  const mainButton = footerContaint?.Button ?? '';
-  const description = footerContaint?.Description ?? '';
-  const subHeading = footerContaint?.SubHeading ?? '';
-  const subDescription = footerContaint?.SubDescription ?? '';
+  // const mainButton = footerContaint?.Button ?? '';
+  // const description = footerContaint?.Description ?? '';
+  // const subHeading = footerContaint?.SubHeading ?? '';
+  // const subDescription = footerContaint?.SubDescription ?? '';
 
   return (
     <>
@@ -30,9 +31,9 @@ export default function Footer({ footerContaint = {} }) {
                 </svg>
               </div>
               <div className="grow">
-                <h2 className="text-gray-900 text-lg title-font font-medium mb-3">{card1.Title}</h2>
-                <p className="leading-relaxed text-base">{card1.Description}</p>
-                <a href="#" className="mt-3 text-indigo-500 inline-flex items-center">{card1.Button}
+                <h2 className="text-gray-900 text-lg title-font font-medium mb-3">{FooterContaint.Cards.Card1.Title}</h2>
+                <p className="leading-relaxed text-base">{FooterContaint.Cards.Card1.Description}</p>
+                <a href="#" className="mt-3 text-indigo-500 inline-flex items-center">{FooterContaint.Cards.Card1.Button}
                   <svg fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} className="w-4 h-4 ml-2" viewBox="0 0 24 24">
                     <path d="M5 12h14M12 5l7 7-7 7"></path>
                   </svg>
@@ -50,9 +51,9 @@ export default function Footer({ footerContaint = {} }) {
                 </svg>
               </div>
               <div className="grow">
-                <h2 className="text-gray-900 text-lg title-font font-medium mb-3">{card2.Title}</h2>
-                <p className="leading-relaxed text-base">{card2.Description}</p>
-                <a href="#" className="mt-3 text-indigo-500 inline-flex items-center">{card2.Button}
+                <h2 className="text-gray-900 text-lg title-font font-medium mb-3">{FooterContaint.Cards.Card2.Title}</h2>
+                <p className="leading-relaxed text-base">{FooterContaint.Cards.Card2.Description}</p>
+                <a href="#" className="mt-3 text-indigo-500 inline-flex items-center">{FooterContaint.Cards.Card2.Button}
                   <svg fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} className="w-4 h-4 ml-2" viewBox="0 0 24 24">
                     <path d="M5 12h14M12 5l7 7-7 7"></path>
                   </svg>
@@ -69,9 +70,9 @@ export default function Footer({ footerContaint = {} }) {
                 </svg>
               </div>
               <div className="grow">
-                <h2 className="text-gray-900 text-lg title-font font-medium mb-3">{card3.Title}</h2>
-                <p className="leading-relaxed text-base">{card3.Description}</p>
-                <a href="#" className="mt-3 text-indigo-500 inline-flex items-center">{card3.Button}
+                <h2 className="text-gray-900 text-lg title-font font-medium mb-3">{FooterContaint.Cards.Card3.Title}</h2>
+                <p className="leading-relaxed text-base">{FooterContaint.Cards.Card3.Description}</p>
+                <a href="#" className="mt-3 text-indigo-500 inline-flex items-center">{FooterContaint.Cards.Card3.Button}
                   <svg fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} className="w-4 h-4 ml-2" viewBox="0 0 24 24">
                     <path d="M5 12h14M12 5l7 7-7 7"></path>
                   </svg>
@@ -80,7 +81,7 @@ export default function Footer({ footerContaint = {} }) {
             </div>
           </div>
 
-          <button className="flex mx-auto mt-16 text-white bg-indigo-500 border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded text-lg">{mainButton}</button>
+          <button className="flex mx-auto mt-16 text-white bg-indigo-500 border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded text-lg">{FooterContaint.Cards.Button}</button>
         </div>
       </section>
 
@@ -93,11 +94,11 @@ export default function Footer({ footerContaint = {} }) {
               <path d="M925.036 57.197h-304c-27.6 0-50 22.4-50 50v304c0 27.601 22.4 50 50 50h145.5c-1.9 79.601-20.4 143.3-55.4 191.2-27.6 37.8-69.399 69.1-125.3 93.8-25.7 11.3-36.8 41.7-24.8 67.101l36 76c11.6 24.399 40.3 35.1 65.1 24.399 66.2-28.6 122.101-64.8 167.7-108.8 55.601-53.7 93.7-114.3 114.3-181.9 20.601-67.6 30.9-159.8 30.9-276.8v-239c0-27.599-22.401-50-50-50zM106.036 913.497c65.4-28.5 121-64.699 166.9-108.6 56.1-53.7 94.4-114.1 115-181.2 20.6-67.1 30.899-159.6 30.899-277.5v-239c0-27.6-22.399-50-50-50h-304c-27.6 0-50 22.4-50 50v304c0 27.601 22.4 50 50 50h145.5c-1.9 79.601-20.4 143.3-55.4 191.2-27.6 37.8-69.4 69.1-125.3 93.8-25.7 11.3-36.8 41.7-24.8 67.101l35.9 75.8c11.601 24.399 40.501 35.2 65.301 24.399z" />
             </svg>
 
-            <p className="leading-relaxed text-lg">{description}</p>
+            <p className="leading-relaxed text-lg">{FooterContaint.Description}</p>
             <span className="inline-block h-1 w-10 rounded bg-indigo-500 mt-8 mb-6" />
 
-            <h2 className="text-gray-900 font-medium title-font tracking-wider text-sm">{subHeading}</h2>
-            <p className="text-gray-500">{subDescription}</p>
+            <h2 className="text-gray-900 font-medium title-font tracking-wider text-sm">{FooterContaint.subHeading}</h2>
+            <p className="text-gray-500">{FooterContaint.subDescription}</p>
           </div>
         </div>
       </section>

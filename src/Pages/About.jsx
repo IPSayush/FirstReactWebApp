@@ -1,5 +1,3 @@
-import React from 'react'
-import Footer from './Home/Footer.jsx'
 import { FooterContaint, AboutContaint } from '../Database.js'
 
 const About = () => {
@@ -66,10 +64,6 @@ const About = () => {
           </div>
         </div>
       </section>
-
-      <div className="bg-[#B9BC97]">
-        <Footer footerContaint={FooterContaint} />
-      </div>
     </>
   )
 }

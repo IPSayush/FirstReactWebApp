@@ -8,8 +8,8 @@ import { CompanyTitle } from '../Database.js';
   (If you need to use it as an <img>, you can reference that local path.)
 */
 
-export default function Navbar({NavContaint}) {
-  
+export default function Navbar({ NavContaint }) {
+
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const location = useLocation();
@@ -31,9 +31,9 @@ export default function Navbar({NavContaint}) {
 
   const navLinks = [
     { to: '/', label: NavContaint.Home },
-    { to: '/services', label: NavContaint.Services },
-    { to: '/contact', label: NavContaint.Contact },
-    { to: '/about', label: NavContaint.About },
+    { to: 'services', label: NavContaint.Services },
+    { to: 'contact', label: NavContaint.Contact },
+    { to: 'about', label: NavContaint.About },
   ];
 
   return (
