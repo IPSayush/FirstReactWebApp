@@ -1,4 +1,12 @@
 export let CompanyTitle= "Etech.";
+export let NavContaint = {
+  Home: "Home",
+  Services: "Services",
+  Contact: "Contact",
+  About: "About",
+  Button1: 'Sing In',
+  Button2: 'Free Trail'
+}
 export let HeroContaint = {
   Heading: "Knausgaard typewriter readymade marfa",
   Description: "Chillwave portland ugh, knausgaard fam polaroid iPhone. Man braid swag typewriter affogato, hella selvage wolf narwhal dreamcatcher.",

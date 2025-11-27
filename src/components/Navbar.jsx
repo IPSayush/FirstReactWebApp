@@ -8,7 +8,8 @@ import { CompanyTitle } from '../Database.js';
   (If you need to use it as an <img>, you can reference that local path.)
 */
 
-export default function Navbar() {
+export default function Navbar({NavContaint}) {
+  
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const location = useLocation();
@@ -29,10 +30,10 @@ export default function Navbar() {
   }, [location.pathname]);
 
   const navLinks = [
-    { to: '/', label: 'Home' },
-    { to: '/services', label: 'Services' },
-    { to: '/contact', label: 'Contact' },
-    { to: '/about', label: 'About' },
+    { to: '/', label: NavContaint.Home },
+    { to: '/services', label: NavContaint.Services },
+    { to: '/contact', label: NavContaint.Contact },
+    { to: '/about', label: NavContaint.About },
   ];
 
   return (
@@ -90,14 +91,14 @@ export default function Navbar() {
             to="/signin"
             className="px-4 py-2 rounded-md border border-primary text-primary text-sm hover:bg-primary/5 transition"
           >
-            Sign in
+            {NavContaint.Button1}
           </Link>
 
           <Link
             to="/trial"
             className="px-4 py-2 rounded-md bg-primary text-white text-sm hover:bg-primary-light transition"
           >
-            Free Trial
+            {NavContaint.Button2}
           </Link>
         </div>
 
@@ -154,13 +155,13 @@ export default function Navbar() {
               to="/signin"
               className="flex-1 text-center px-3 py-2 rounded-md border border-primary text-primary"
             >
-              Sign in
+              {NavContaint.Button1}
             </Link>
             <Link
               to="/trial"
               className="flex-1 text-center px-3 py-2 rounded-md bg-primary text-white"
             >
-              Free Trial
+              {NavContaint.Button2}
             </Link>
           </div>
         </div>
