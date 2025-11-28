@@ -4,8 +4,7 @@ import React from 'react';
  * Safe Footer: uses optional chaining and defaults so it won't crash
  * if footerContaint is undefined or missing fields.
  */
-export default function Footer({FooterContaint }) {
-  
+export default function Footer({ FooterContaint }) {
   // Provide safe defaults
   // i was pass props nornamly but is was throwing error while clicking on navlink so i use Defauld Objects code is copied from chatgpt 
   // const cards = footerContaint?.Cards ?? {};
@@ -20,18 +19,18 @@ export default function Footer({FooterContaint }) {
 
   return (
     <>
-      <section className="text-gray-600 body-font">
+      <section className="text-gray-400 font-serif bg-[#141414]">
         <div className="container px-5 py-24 mx-auto">
           <div className="flex flex-wrap sm:-m-4 -mx-4 -mb-10 -mt-4 md:space-y-0 space-y-6">
             {/* Card 1 */}
-            <div className="p-4 md:w-1/3 flex flex-col text-center items-center">
+            <div className="p-4 md:w-1/3 flex flex-col text-center items-center bg-[#222222]">
               <div className="w-20 h-20 inline-flex items-center justify-center rounded-full bg-indigo-100 text-indigo-500 mb-5 shrink-0">
                 <svg fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} className="w-10 h-10" viewBox="0 0 24 24">
                   <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
                 </svg>
               </div>
               <div className="grow">
-                <h2 className="text-gray-900 text-lg title-font font-medium mb-3">{FooterContaint.Cards.Card1.Title}</h2>
+                <h2 className="text-indigo-500 text-lg title-font font-medium mb-3">{FooterContaint.Cards.Card1.Title}</h2>
                 <p className="leading-relaxed text-base">{FooterContaint.Cards.Card1.Description}</p>
                 <a href="#" className="mt-3 text-indigo-500 inline-flex items-center">{FooterContaint.Cards.Card1.Button}
                   <svg fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} className="w-4 h-4 ml-2" viewBox="0 0 24 24">
@@ -42,7 +41,7 @@ export default function Footer({FooterContaint }) {
             </div>
 
             {/* Card 2 */}
-            <div className="p-4 md:w-1/3 flex flex-col text-center items-center">
+            <div className="p-4 md:w-1/3 flex flex-col text-center items-center bg-[#222222]">
               <div className="w-20 h-20 inline-flex items-center justify-center rounded-full bg-indigo-100 text-indigo-500 mb-5 shrink-0">
                 <svg fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} className="w-10 h-10" viewBox="0 0 24 24">
                   <circle cx="6" cy="6" r="3"></circle>
@@ -51,7 +50,7 @@ export default function Footer({FooterContaint }) {
                 </svg>
               </div>
               <div className="grow">
-                <h2 className="text-gray-900 text-lg title-font font-medium mb-3">{FooterContaint.Cards.Card2.Title}</h2>
+                <h2 className="text-indigo-500 text-lg title-font font-medium mb-3">{FooterContaint.Cards.Card2.Title}</h2>
                 <p className="leading-relaxed text-base">{FooterContaint.Cards.Card2.Description}</p>
                 <a href="#" className="mt-3 text-indigo-500 inline-flex items-center">{FooterContaint.Cards.Card2.Button}
                   <svg fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} className="w-4 h-4 ml-2" viewBox="0 0 24 24">
@@ -62,7 +61,7 @@ export default function Footer({FooterContaint }) {
             </div>
 
             {/* Card 3 */}
-            <div className="p-4 md:w-1/3 flex flex-col text-center items-center">
+            <div className="p-4 md:w-1/3 flex flex-col text-center items-center bg-[#222222]">
               <div className="w-20 h-20 inline-flex items-center justify-center rounded-full bg-indigo-100 text-indigo-500 mb-5 shrink-0">
                 <svg fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} className="w-10 h-10" viewBox="0 0 24 24">
                   <path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"></path>
@@ -70,7 +69,7 @@ export default function Footer({FooterContaint }) {
                 </svg>
               </div>
               <div className="grow">
-                <h2 className="text-gray-900 text-lg title-font font-medium mb-3">{FooterContaint.Cards.Card3.Title}</h2>
+                <h2 className="text-indigo-500 text-lg title-font font-medium mb-3">{FooterContaint.Cards.Card3.Title}</h2>
                 <p className="leading-relaxed text-base">{FooterContaint.Cards.Card3.Description}</p>
                 <a href="#" className="mt-3 text-indigo-500 inline-flex items-center">{FooterContaint.Cards.Card3.Button}
                   <svg fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} className="w-4 h-4 ml-2" viewBox="0 0 24 24">
@@ -80,13 +79,12 @@ export default function Footer({FooterContaint }) {
               </div>
             </div>
           </div>
-
-          <button className="flex mx-auto mt-16 text-white bg-indigo-500 border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded text-lg">{FooterContaint.Cards.Button}</button>
+          <button className="flex mx-auto mt-16 text-white bg-indigo-500 border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded text-lg">{FooterContaint.Button}</button>
         </div>
       </section>
 
       {/* ...rest of your footer sections unchanged but using safe values */}
-      <section className="text-gray-600 body-font">
+      <section className="text-gray-400 font-serif bg-[#141414]">
         <div className="container px-5 py-0 mx-auto">
           <div className="xl:w-1/2 lg:w-3/4 w-full mx-auto text-center">
             {/* SVG */}
@@ -97,68 +95,32 @@ export default function Footer({FooterContaint }) {
             <p className="leading-relaxed text-lg">{FooterContaint.Description}</p>
             <span className="inline-block h-1 w-10 rounded bg-indigo-500 mt-8 mb-6" />
 
-            <h2 className="text-gray-900 font-medium title-font tracking-wider text-sm">{FooterContaint.subHeading}</h2>
+            <h2 className="text-indigo-500 font-medium title-font tracking-wider text-sm">{FooterContaint.subHeading}</h2>
             <p className="text-gray-500">{FooterContaint.subDescription}</p>
           </div>
         </div>
       </section>
 
-      <footer className="text-gray-600 body-font">
+      <footer className="text-gray-400 font-serif bg-[#141414]">
         <div className="container px-5 py-12 mx-auto">
 
           {/* ALL ROWS (3 categories + subscribe) */}
           <div className="flex flex-wrap justify-between gap-y-10">
 
-            {/* CATEGORY 1 */}
-            <div className="w-1/3 sm:w-1/4 px-2">
-              <h2 className="font-medium text-gray-900 tracking-widest text-xs mb-3">
-                CATEGORIES
-              </h2>
-              <nav className="list-none space-y-2">
-                <li><a className="text-gray-600 text-sm hover:text-gray-800" href="#">First Link</a></li>
-                <li><a className="text-gray-600 text-sm hover:text-gray-800" href="#">Second Link</a></li>
-                <li><a className="text-gray-600 text-sm hover:text-gray-800" href="#">Third Link</a></li>
-                <li><a className="text-gray-600 text-sm hover:text-gray-800" href="#">Fourth Link</a></li>
-              </nav>
-            </div>
-
-            {/* CATEGORY 2 */}
-            <div className="w-1/3 sm:w-1/4 px-2">
-              <h2 className="font-medium text-gray-900 tracking-widest text-xs mb-3">
-                CATEGORIES
-              </h2>
-              <nav className="list-none space-y-2">
-                <li><a className="text-gray-600 text-sm hover:text-gray-800" href="#">First Link</a></li>
-                <li><a className="text-gray-600 text-sm hover:text-gray-800" href="#">Second Link</a></li>
-                <li><a className="text-gray-600 text-sm hover:text-gray-800" href="#">Third Link</a></li>
-                <li><a className="text-gray-600 text-sm hover:text-gray-800" href="#">Fourth Link</a></li>
-              </nav>
-            </div>
-
-            {/* CATEGORY 3 */}
-            <div className="w-1/3 sm:w-1/4 px-2">
-              <h2 className="font-medium text-gray-900 tracking-widest text-xs mb-3">
-                CATEGORIES
-              </h2>
-              <nav className="list-none space-y-2">
-                <li><a className="text-gray-600 text-sm hover:text-gray-800" href="#">First Link</a></li>
-                <li><a className="text-gray-600 text-sm hover:text-gray-800" href="#">Second Link</a></li>
-                <li><a className="text-gray-600 text-sm hover:text-gray-800" href="#">Third Link</a></li>
-                <li><a className="text-gray-600 text-sm hover:text-gray-800" href="#">Fourth Link</a></li>
-              </nav>
-            </div>
+            <CategoryLinks />
+            <CategoryLinks />
+            <CategoryLinks />
 
             {/* SUBSCRIBE BOX */}
             <div className="w-full sm:w-1/4 px-2">
-              <h2 className="font-medium text-gray-900 tracking-widest text-xs mb-3">SUBSCRIBE</h2>
+              <h2 className="font-medium text-indigo-500 tracking-widest text-xs mb-3">SUBSCRIBE</h2>
 
               <div className="flex flex-col gap-3">
                 <input
                   type="email"
                   placeholder="Enter your email"
-                  className="w-full bg-gray-100 rounded border border-gray-300 focus:ring-2 focus:ring-indigo-300 focus:border-indigo-500 py-2 px-3 text-sm outline-none"
+                  className="w-full bg-[#111111] rounded border border-[#333333] focus:ring-2 focus:ring-amber-950 focus:border-gray-500 py-2 px-3 text-sm outline-none"
                 />
-
                 <button className="w-full bg-indigo-500 text-white py-2 rounded hover:bg-indigo-600 transition">
                   Subscribe
                 </button>
@@ -175,9 +137,9 @@ export default function Footer({FooterContaint }) {
         </div>
 
 
-        <div className="bg-gray-100">
+        <div className="bg-[#141414] border-t-1">
           <div className="container px-5 py-6 mx-auto flex items-center sm:flex-row flex-col">
-            <a className="flex title-font font-medium items-center md:justify-start justify-center text-gray-900" href="#">
+            <a className="flex title-font font-medium items-center md:justify-start justify-center text-indigo-500" href="#">
               <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" className="w-10 h-10 text-white p-2 bg-indigo-500 rounded-full" viewBox="0 0 24 24">
                 <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
               </svg>
@@ -185,7 +147,7 @@ export default function Footer({FooterContaint }) {
             </a>
 
             <p className="text-sm text-gray-500 sm:ml-6 sm:mt-0 mt-4">© 2020 Tailblocks —
-              <a href="https://twitter.com/knyttneve" rel="noopener noreferrer" className="text-gray-600 ml-1" target="_blank" >@knyttneve</a>
+              <a href="https://twitter.com/knyttneve" rel="noopener noreferrer" className="text-gray-400 ml-1" target="_blank" >@knyttneve</a>
             </p>
 
             <span className="inline-flex sm:ml-auto sm:mt-0 mt-4 justify-center sm:justify-start">
@@ -218,4 +180,19 @@ export default function Footer({FooterContaint }) {
 
     </>
   );
+}
+const CategoryLinks = () => {
+  return (
+    <div className="w-1/3 sm:w-1/4 px-2 border-l-2">
+      <h2 className="font-medium text-indigo-500 tracking-widest text-xs mb-3">
+        CATEGORIES
+      </h2>
+      <nav className="list-none space-y-2" >
+        <li><a className="text-gray-400 text-sm hover:text-gray-800" href="#">First Linky</a></li>
+        <li><a className="text-gray-400 text-sm hover:text-gray-800" href="#">Second Link</a></li>
+        <li><a className="text-gray-400 text-sm hover:text-gray-800" href="#">Third Link</a></li>
+        <li><a className="text-gray-400 text-sm hover:text-gray-800" href="#">Fourth Link</a></li>
+      </nav>
+    </div>
+  )
 }

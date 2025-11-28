@@ -39,10 +39,10 @@ export default function Navbar({ NavContaint }) {
   return (
     // Fixed header so it stays on scroll. z-50 ensures on top of other content.
     <header
-      className={`fixed top-0 left-0 w-full z-50 transition-colors duration-200 ${scrolled ? 'backdrop-blur-sm bg-bone/90 shadow-md' : 'bg-bone/95'
+      className={`border-b-1 fixed top-0 left-0 w-full z-50 transition-colors duration-200 ${scrolled ? 'backdrop-blur-sm bg-bone/90 shadow-md' : 'bg-bone/95'
         }`}
     >
-      <div className="container mx-auto flex items-center justify-between px-4 md:px-6 py-3 md:py-4">
+      <div className="container mx-auto flex items-center justify-between px-4 md:px-6 py-3 md:py-4 text-white">
         {/* Brand / logo */}
         <Link to="/" className="flex items-center gap-3">
           {/* If you want to use the uploaded image as logo, replace the svg with:
@@ -133,7 +133,7 @@ export default function Navbar({ NavContaint }) {
         className={`md:hidden transition-max-height duration-300 overflow-hidden ${open ? 'max-h-[400px]' : 'max-h-0'
           }`}
       >
-        <div className="px-4 pb-4 pt-2 border-t border-gray-200/60">
+        <div className="px-4 pb-4 pt-2 border-t border-gray-500/60">
           <nav className="flex flex-col gap-2">
             {navLinks.map((link) => {
               const active = location.pathname === link.to;

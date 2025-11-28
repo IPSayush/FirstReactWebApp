@@ -3,7 +3,7 @@ import React from 'react'
 const Products = (props) => {
     return (
         <>
-            <section className="text-gray-600 body-font">
+            <section className="text-gray-400 font-serif bg-[#141414]">
                 <div className="container px-5 py-24 mx-auto">
                     <div className="flex flex-wrap -m-4">
                         <Product Image={props.ProductsContaint.Product1.Image} Category={props.ProductsContaint.Product1.Category} Title={props.ProductsContaint.Product1.Title} Price={props.ProductsContaint.Product1.Price}/>
@@ -34,8 +34,8 @@ const Product = (props) => {
                 </a>
                 <div className="mt-4">
                     <h3 className="text-gray-500 text-xs tracking-widest title-font mb-1">{props.Category}</h3>
-                    <h2 className="text-gray-900 title-font text-lg font-medium">{props.Title}</h2>
-                    <p className="mt-1">{props.Price}</p>
+                    <h2 className="text-indigo-500 title-font text-lg font-medium">{props.Title}</h2>
+                    <p className="mt-1 text-white">{props.Price}</p>
                 </div>
             </div>
         </>
